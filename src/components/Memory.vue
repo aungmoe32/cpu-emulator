@@ -53,11 +53,11 @@
     }
 
     function address(index) {
-        return this.toMemHex(index.toString(16))
+        return toMemHex(index.toString(16))
     }
 
     function listID(index) {
-        return 'mem_' + this.toMemHex(index.toString(16))
+        return 'mem_' + toMemHex(index.toString(16))
     }
      
 </script>
