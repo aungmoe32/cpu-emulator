@@ -5,7 +5,7 @@
         <span>
             8-bit cpu emulator dev by
             <a href="https://portfolio-aungmoe32.vercel.app/">aungmoe</a> <br>
-            <a href="https://portfolio-aungmoe32.vercel.app/">source code</a>
+            <a href="https://github.com/aungmoe32/cpu-emulator">source code</a>
         </span>
         
 
