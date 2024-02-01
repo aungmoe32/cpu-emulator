@@ -16,13 +16,8 @@
 
 <script setup> 
     import { reactive, computed, watch, ref } from 'vue'
-    const props = defineProps(['console_log'])
     const message = ref('')
 
-
-    watch(() => props.console_log, (first, second) => {
-        log(props.console_log)
-    })
 
     function toMemHex(hex) {
         return hex.toUpperCase().padStart(2, '0');
@@ -43,6 +38,10 @@
     function log(data) {
         message.value += ">> " + data + "\n"
     }
+
+    defineExpose({
+      log
+    })
 
 </script>
 

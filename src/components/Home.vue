@@ -57,7 +57,7 @@
 
                     </div>
                     <div class="col-6 h-100 p-3 ">
-                        <console class="h-100" :console_log="console_log"></console>
+                        <console class="h-100"  ref="Console"></console>
                     </div>
                 </div>
 
@@ -101,7 +101,8 @@ export default {
             showRunBtn: true,
             showStepBtn: true,
             goto : 0,
-            console_log : ''
+            console_log : '',
+            Console : null
         }
     },
     created() {
@@ -174,6 +175,7 @@ export default {
         handlePrintInstru(rnum, value) {
             // this.$root.$emit('clg', 'reg ' + rnum + ' : ' + value)
             this.console_log = 'reg ' + rnum + ' : ' + value
+            this.$refs.Console.log(this.console_log)
         },
 
         run() {
